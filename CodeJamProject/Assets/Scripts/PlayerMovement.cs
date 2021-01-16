@@ -17,22 +17,22 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if(transform.position.y >= 0)
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
-        }
-        */
-        
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         
         if(Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
+        }
+    }
+    void LateUpdate()
+    {
+        if(transform.position.y >= 3.85)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);
+        }
+        else if (gameObject.GetComponent<Rigidbody2D>().gravityScale > 0)
+        {
+            transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 0f);
         }
     }
 

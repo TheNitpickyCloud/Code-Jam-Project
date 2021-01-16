@@ -25,6 +25,7 @@ public class PauseMenu : MonoBehaviour
     public void Restart() 
     {
         pauseMenu.SetActive(false);
+        PowerBlock.power = 0;
         SceneManager.LoadScene("Level1");
         Time.timeScale = 1f;
 ;    }
