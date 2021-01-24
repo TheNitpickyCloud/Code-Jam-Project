@@ -27,4 +27,8 @@ public class MainMenu : MonoBehaviour
         Time.timeScale = 1f;
         Application.Quit();
     }
+    public void BackButton()
+    {
+        levelSelector.SetActive(false);
+    }
 }
