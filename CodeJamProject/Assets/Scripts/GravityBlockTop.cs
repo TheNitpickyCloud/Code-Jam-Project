@@ -6,6 +6,7 @@ public class GravityBlockTop : MonoBehaviour
 {
     bool rotate = false;
     public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +32,7 @@ public class GravityBlockTop : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
             rotate = true;
         }

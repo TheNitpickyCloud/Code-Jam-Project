@@ -7,6 +7,7 @@ public class LavaBlock : MonoBehaviour
     public GameObject endPanel;
     public GameObject pauseMenu;
     public GameObject pauseButton;
+    public ParticleSystem destroyEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,10 @@ public class LavaBlock : MonoBehaviour
         //play lava effect
         if(player.CompareTag("Player"))
         {
+            destroyEffect.gameObject.SetActive(true);
+            destroyEffect.transform.position = player.transform.position;
             Destroy(player.gameObject);
+            destroyEffect.Play();
             endPanel.SetActive(true);
         }
     }
