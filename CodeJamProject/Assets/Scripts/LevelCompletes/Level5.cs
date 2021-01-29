@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Level5 : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -20,6 +20,8 @@ public class Level5 : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             PlayButtons.level6unlocked = true;
+            ES3.Save<bool>("level6", PlayButtons.level6unlocked);
+            SceneManager.LoadScene("Level6");
         }
     }
 }

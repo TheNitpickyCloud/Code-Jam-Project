@@ -26,9 +26,10 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         PowerBlock.power = 0;
-        SceneManager.LoadScene("Level1");
+        //SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
-;    }
+    }
 
     public void QuitGame() 
     {
