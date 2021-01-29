@@ -7,6 +7,7 @@ public class Assistant : MonoBehaviour
     public GameObject[] lavablocks;
     public TMP_Text powerDisplay;
     float index = 0;
+    public ParticleSystem destroyEffect;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,8 +24,11 @@ public class Assistant : MonoBehaviour
         if(PowerBlock.power > 0)
         {
             Destroy(lavablocks[(int)index]);
+            destroyEffect.transform.position = lavablocks[(int)index].transform.position;
             PowerBlock.power--;
             index++;
+            destroyEffect.gameObject.SetActive(true);
+            destroyEffect.Play();
             //powerDisplay.text = PowerBlock.power.ToString();
         }
     }

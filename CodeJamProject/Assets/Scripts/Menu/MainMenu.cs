@@ -5,6 +5,7 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public GameObject levelSelector;
+    public GameObject playerTexture;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +20,7 @@ public class MainMenu : MonoBehaviour
     
     public void PlayLevel()
     {
+        //playerTexture.SetActive(false);
         levelSelector.SetActive(true);
     }
 
