@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour
     }
     void LateUpdate()
     {
-        if(transform.position.y >= 3.85)
+        if(gameObject.GetComponent<Rigidbody2D>().gravityScale <= 0)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, 180f);
         }
