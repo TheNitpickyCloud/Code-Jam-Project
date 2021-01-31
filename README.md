@@ -1,3 +1,8 @@
+# HOW TO INSTALL/USE  
+1. download the repository as a zip and extract it somewhere
+2. navigate to the extracted folder and go to CodeJamProject --> Builds and double click on Blobby.exe 
+
+
 # DESCRIPTION
 
 You're a failed experiment, stuck in the deep depths of an abandoned lab. Your main goal at the moment is try to escape. Wait, did that screen just turn on?!
