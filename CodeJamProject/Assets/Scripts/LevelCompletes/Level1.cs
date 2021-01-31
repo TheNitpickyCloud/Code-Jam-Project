@@ -8,7 +8,7 @@ public class Level1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        FindObjectOfType<AudioManager>().Play("music");
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class Level1 : MonoBehaviour
         
         if(other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("level-change");
             PlayButtons.level2unlocked = true;
             ES3.Save<bool>("level2", PlayButtons.level2unlocked);
             SceneManager.LoadScene("Level2");

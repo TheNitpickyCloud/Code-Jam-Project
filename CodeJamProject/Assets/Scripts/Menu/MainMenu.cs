@@ -8,8 +8,19 @@ public class MainMenu : MonoBehaviour
     public GameObject playerTexture;
     // Start is called before the first frame update
     void Start()
-    {
-        
+    {/*
+        ES3.DeleteKey("level1");
+        ES3.DeleteKey("level2");
+        ES3.DeleteKey("level3");
+        ES3.DeleteKey("level4");
+        ES3.DeleteKey("level5");
+        ES3.DeleteKey("level6");
+        ES3.DeleteKey("level7");
+        ES3.DeleteKey("level8");
+        ES3.DeleteKey("level9");
+        ES3.DeleteKey("level10");
+    */
+        FindObjectOfType<AudioManager>().Play("music");
     }
 
     // Update is called once per frame

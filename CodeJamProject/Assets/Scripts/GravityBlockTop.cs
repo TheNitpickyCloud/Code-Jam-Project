@@ -32,7 +32,7 @@ public class GravityBlockTop : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            
+            FindObjectOfType<AudioManager>().Play("whoosh");
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
             rotate = true;
         }

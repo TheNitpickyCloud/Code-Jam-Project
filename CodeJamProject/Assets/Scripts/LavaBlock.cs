@@ -25,6 +25,7 @@ public class LavaBlock : MonoBehaviour
         //play lava effect
         if(player.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("hurt");
             destroyEffect.gameObject.SetActive(true);
             destroyEffect.transform.position = player.transform.position;
             Destroy(player.gameObject);

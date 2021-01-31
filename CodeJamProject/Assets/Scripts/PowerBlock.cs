@@ -22,6 +22,7 @@ public class PowerBlock : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
+            FindObjectOfType<AudioManager>().Play("collectible-pickup");
             power++;
             //powerDisplay.text = power.ToString();
             Destroy(gameObject);

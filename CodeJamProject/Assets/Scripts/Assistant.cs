@@ -23,7 +23,9 @@ public class Assistant : MonoBehaviour
     {
         if(PowerBlock.power > 0)
         {
+            FindObjectOfType<AudioManager>().Play("powerup-use");
             Destroy(lavablocks[(int)index]);
+            //FindObjectOfType<AudioManager>().Play("explosion");
             destroyEffect.transform.position = lavablocks[(int)index].transform.position;
             PowerBlock.power--;
             index++;
